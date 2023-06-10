@@ -29,6 +29,22 @@ if (isset($_SESSION['email'])) {
 
             <!-- Content Wrapper. Contains page content -->
             <div class="content-wrapper">
+                <div class="content-header">
+                    <div class="container-fluid">
+                        <div class="row mb-2">
+                            <div class="col-sm-6">
+                                <h1 class="m-0">Product Page</h1>
+                            </div><!-- /.col -->
+                            <div class="col-sm-6">
+                                <ol class="breadcrumb float-sm-right">
+                                    <li class="breadcrumb-item"><a href="dashboard.php">Dashboard</a></li>
+                                    <li class="breadcrumb-item"><a href="product.php">Product</a></li>
+                                    <li class="breadcrumb-item active">Add Product Image</li>
+                                </ol>
+                            </div><!-- /.col -->
+                        </div><!-- /.row -->
+                    </div><!-- /.container-fluid -->
+                </div>
                 <!-- Main content -->
                 <section class="content">
                     <div class="container-fluid">
@@ -42,7 +58,7 @@ if (isset($_SESSION['email'])) {
                                 <div class="card-body">
 
                                     <div class="form-group">
-                                        <label>PRODUCT NAME</label>
+                                        <label>SELECT PRODUCT</label>
                                         <input type="text" class="form-control" id="pro_name" placeholder="Enter Product Name" name="pro_name">
                                     </div>
 

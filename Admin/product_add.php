@@ -29,6 +29,22 @@ if (isset($_SESSION['email'])) {
 
             <!-- Content Wrapper. Contains page content -->
             <div class="content-wrapper">
+                <div class="content-header">
+                    <div class="container-fluid">
+                        <div class="row mb-2">
+                            <div class="col-sm-6">
+                                <h1 class="m-0">Product Page</h1>
+                            </div><!-- /.col -->
+                            <div class="col-sm-6">
+                                <ol class="breadcrumb float-sm-right">
+                                    <li class="breadcrumb-item"><a href="dashboard.php">Dashboard</a></li>
+                                    <li class="breadcrumb-item"><a href="product.php">Product</a></li>
+                                    <li class="breadcrumb-item active">Add Product</li>
+                                </ol>
+                            </div><!-- /.col -->
+                        </div><!-- /.row -->
+                    </div><!-- /.container-fluid -->
+                </div>
                 <!-- Main content -->
                 <section class="content">
                     <div class="container-fluid">
@@ -47,13 +63,23 @@ if (isset($_SESSION['email'])) {
                                     </div>
 
                                     <div class="form-group">
-                                        <label>COLOR</label>
-                                        <input type="text" class="form-control" id="color" placeholder="Enter Color Name" name="color">
+                                        <label>PRODUCT PRICE</label>
+                                        <input type="number" class="form-control" id="price" placeholder="Enter Product Price" name="price">
                                     </div>
 
                                     <div class="form-group">
-                                        <label>DESCRIPTION</label>
-                                        <textarea name="description" class="form-control" id="description" cols="100" rows="2" placeholder="Enter Description"></textarea>
+                                        <label>COLOR</label>
+                                        <input type="text" class="form-control" id="color" placeholder="Enter Color" name="color">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>DESCRIPTION 1</label>
+                                        <textarea name="description1" class="form-control" id="description1" cols="100" rows="2" placeholder="Enter Description 1"></textarea>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>DESCRIPTION 2</label>
+                                        <textarea name="description2" class="form-control" id="description2" cols="100" rows="2" placeholder="Enter Description 2"></textarea>
                                     </div>
 
                                     <div class="form-group">
@@ -74,11 +100,11 @@ if (isset($_SESSION['email'])) {
                                 </div>
 
                                 <div class="card-footer">
-                                    <button type="submit" class="btn btn-primary" name="submit" role="button">ADD Product</button>
+                                    <button type="submit" value="add" class="btn btn-primary" name="add" role="button">ADD Product</button>
                                 </div>
+
                             </form>
                         </div>
-
                     </div><!-- /.container-fluid -->
                 </section>
                 <!-- /.Main content -->
