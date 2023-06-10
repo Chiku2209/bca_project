@@ -38,6 +38,8 @@ if (isset($_SESSION['email'])) {
                             <div class="card-header">
                                 <h2 class="card-title"><big>Product Page</big></h2>
                                 <a href="add_product.php" class="float-right"><i class="fa-solid fa-square-plus fa-2xl" style="color: #ffffff;"></i></a>
+                                &nbsp;
+                                <a href="add_product.php" class="float-right"><i class="fa-solid fa-square-plus fa-2xl" style="color: #ffffff;"></i></a>
                             </div>
                         </div>
                     </div><!-- /.container-fluid -->

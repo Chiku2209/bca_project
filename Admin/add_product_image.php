@@ -35,7 +35,7 @@ if (isset($_SESSION['email'])) {
                         <br>
                         <div class="card card-primary">
                             <div class="card-header">
-                                <h2 class="card-title"><big>ADD Product</big></h2>
+                                <h2 class="card-title"><big>ADD Product Image</big></h2>
                             </div>
                             <form action="product_process.php" method="post" enctype="multipart/form-data">
 
@@ -47,28 +47,16 @@ if (isset($_SESSION['email'])) {
                                     </div>
 
                                     <div class="form-group">
-                                        <label>COLOR</label>
-                                        <input type="text" class="form-control" id="color" placeholder="Enter Color Name" name="color">
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label>DESCRIPTION</label>
-                                        <textarea name="description" class="form-control" id="description" cols="100" rows="2" placeholder="Enter Description"></textarea>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label>SKU</label>
-                                        <input type="text" class="form-control" id="sku" placeholder="Enter SKU detail" name="sku">
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label>COUNTRY</label>
-                                        <input type="text" class="form-control" id="country" placeholder="Enter Country Name" name="country">
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label>HERITAGE</label>
-                                        <textarea name="heritage" class="form-control" id="heritage" cols="100" rows="2" placeholder="Enter Heritage Description"></textarea>
+                                        <label for="exampleInputFile">PRODUCT IMAGE</label>
+                                        <div class="input-group">
+                                            <div class="custom-file">
+                                                <input type="file" class="custom-file-input" id="exampleInputFile" multiple>
+                                                <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                                            </div>
+                                            <div class="input-group-append">
+                                                <span class="input-group-text">Upload</span>
+                                            </div>
+                                        </div>
                                     </div>
 
                                 </div>
