@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 10, 2023 at 07:54 PM
+-- Generation Time: Jun 13, 2023 at 02:07 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -44,8 +44,7 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `pro_name`, `price`, `color`, `description1`, `description2`, `sku`, `country`, `heritage`) VALUES
-(3, 'Air Max 97', 16995, 'Be True', 'Express yourself with the Air Max 97. The icon gets a game-changing new look with shimmering, delicate lace. Inspired by fluidity of expression, the remixed classic dons ruffle patterns to enhance the original ripple design. Nostalgic hues pull inspiration from Pride flags while incorporating a vintage flair as a nod to LGBTQIA+ history and the trailblazers that paved the way for generations to come. Removable charms and a customisable tongue let you own your look, showing what \"Be True\" means to you with every step.', 'Be True started in 2012 as a grassroots effort led by Nike employees in the PRIDE Network seeking to build a company culture diverse in orientation, identity and expression. Since then, Nike has taken action to support the LGBTQIA+ community, recognising that inclusive spaces in sport create a better world for all. This year, Nike, in association with CAFAmerica, recognised 12 organisations advancing the LGBTQIA+ community and provided them with more than $715k in donations.', 'FD8637-600', 'Vietnam ', 'Remember the revolution. 1987 saw the birth of the Air Max lineage, showcasing visible Air for the first time. What began as an experiment in cushioning soon evolved into an icon on the track and the streets. Over the years, it is been reimagined and retooled, but the heritage always remains.'),
-(4, 'Air Max 97', 16995, 'Be True', 'Express yourself with the Air Max 97. The icon gets a game-changing new look with shimmering, delicate lace. Inspired by fluidity of expression, the remixed classic dons ruffle patterns to enhance the original ripple design. Nostalgic hues pull inspiration from Pride flags while incorporating a vintage flair as a nod to LGBTQIA+ history and the trailblazers that paved the way for generations to come. Removable charms and a customisable tongue let you own your look, showing what \"Be True\" means to you with every step.', 'Be True started in 2012 as a grassroots effort led by Nike employees in the PRIDE Network seeking to build a company culture diverse in orientation, identity and expression. Since then, Nike has taken action to support the LGBTQIA+ community, recognising that inclusive spaces in sport create a better world for all. This year, Nike, in association with CAFAmerica, recognised 12 organisations advancing the LGBTQIA+ community and provided them with more than $715k in donations.', 'FD8637-600', 'Vietnam ', 'Remember the revolution. 1987 saw the birth of the Air Max lineage, showcasing visible Air for the first time. What began as an experiment in cushioning soon evolved into an icon on the track and the streets. Over the years, it is been reimagined and retooled, but the heritage always remains.');
+(8, 'Air Jordan 1 Retro High OG', 16995, 'Light Smoke Grey', 'desc1', 'desc2', 'DZ5485-051', 'China', 'heritage');
 
 -- --------------------------------------------------------
 
@@ -94,7 +93,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `users`
