@@ -1,6 +1,12 @@
 <?php
 session_start();
 if (isset($_SESSION['email'])) {
+
+    include_once('include/config.php');
+    extract($_REQUEST);
+    $qry = "SELECT * FROM products WHERE id='" . $id . "'";
+    $res = mysqli_query($conn, $qry);
+    $result = mysqli_fetch_row($res);
 ?>
     <!DOCTYPE html>
     <html lang="en">
@@ -8,7 +14,7 @@ if (isset($_SESSION['email'])) {
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Nike SNKRS | Add Product</title>
+        <title>Nike SNKRS | Edit Product</title>
 
         <!-- Styles -->
         <?php include('common/style.php'); ?>
@@ -59,49 +65,48 @@ if (isset($_SESSION['email'])) {
 
                                     <div class="form-group">
                                         <label>PRODUCT NAME</label>
-                                        <input type="text" class="form-control" id="pro_name" placeholder="Enter Product Name" name="pro_name">
+                                        <input type="text" class="form-control" id="pro_name" placeholder="Enter Product Name" value="<?php echo $result[1]; ?>" name="pro_name">
                                     </div>
 
                                     <div class="form-group">
                                         <label>PRODUCT PRICE</label>
-                                        <input type="number" class="form-control" id="price" placeholder="Enter Product Price" name="price">
+                                        <input type="number" class="form-control" id="price" placeholder="Enter Product Price" name="price" value="<?php echo $result[2]; ?>">
                                     </div>
 
                                     <div class="form-group">
                                         <label>COLOR</label>
-                                        <input type="text" class="form-control" id="color" placeholder="Enter Color" name="color">
+                                        <input type="text" class="form-control" id="color" placeholder="Enter Color" name="color" value="<?php echo $result[3]; ?>">
                                     </div>
 
                                     <div class="form-group">
                                         <label>DESCRIPTION 1</label>
-                                        <textarea name="description1" class="form-control" id="description1" cols="100" rows="2" placeholder="Enter Description 1"></textarea>
+                                        <textarea name="description1" class="form-control" id="description1" cols="100" rows="2" placeholder="Enter Description 1"><?php echo $result[4]; ?></textarea>
                                     </div>
 
                                     <div class="form-group">
                                         <label>DESCRIPTION 2</label>
-                                        <textarea name="description2" class="form-control" id="description2" cols="100" rows="2" placeholder="Enter Description 2"></textarea>
+                                        <textarea name="description2" class="form-control" id="description2" cols="100" rows="2" placeholder="Enter Description 2"><?php echo $result[5]; ?></textarea>
                                     </div>
 
                                     <div class="form-group">
                                         <label>SKU</label>
-                                        <input type="text" class="form-control" id="sku" placeholder="Enter SKU detail" name="sku">
+                                        <input type="text" class="form-control" id="sku" placeholder="Enter SKU detail" name="sku" value="<?php echo $result[6]; ?>">
                                     </div>
 
                                     <div class="form-group">
                                         <label>COUNTRY</label>
-                                        <input type="text" class="form-control" id="country" placeholder="Enter Country Name" name="country">
+                                        <input type="text" class="form-control" id="country" placeholder="Enter Country Name" name="country" value="<?php echo $result[7]; ?>">
                                     </div>
 
                                     <div class="form-group">
                                         <label>HERITAGE</label>
-                                        <textarea name="heritage" class="form-control" id="heritage" cols="100" rows="2" placeholder="Enter Heritage Description"></textarea>
+                                        <textarea name="heritage" class="form-control" id="heritage" cols="100" rows="2" placeholder="Enter Heritage Description"><?php echo $result[8]; ?></textarea>
                                     </div>
 
-                                    
                                 </div>
 
                                 <div class="card-footer">
-                                    <button type="submit" value="add" class="btn btn-primary" name="submit" role="button">ADD Product</button>
+                                    <button type="submit" value="edit" class="btn btn-primary" name="submit" role="button">Edit Product</button>
                                 </div>
 
                             </form>

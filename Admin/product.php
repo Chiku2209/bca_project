@@ -89,7 +89,8 @@ if (isset($_SESSION['email'])) {
                                         while ($result = mysqli_fetch_row($res)) {
                                         ?>
                                             <tr>
-                                                <td><?php echo $no; $no++; ?></td>
+                                                <td><?php echo $no;
+                                                    $no++; ?></td>
                                                 <td><?php echo $result[1]; ?></td>
                                                 <td><?php echo $result[2]; ?></td>
                                                 <td><?php echo $result[3]; ?></td>
@@ -98,8 +99,8 @@ if (isset($_SESSION['email'])) {
                                                 <td><?php echo $result[6]; ?></td>
                                                 <td><?php echo $result[7]; ?></td>
                                                 <td><?php echo substr($result[8], 0, 100); ?></td>
-                                                <td><i class="fa-solid fa-file-pen fa-xl"></i></td>
-                                                <td><a href="product_process.php?id=<?php echo $result[0]; ?>&&op=del"><i class="fa-solid fa-trash fa-xl"></i></a></td>
+                                                <td><a href="product_edit.php?id=<?php echo $result[0]; ?>"><i class="fa-solid fa-file-pen fa-xl"></i></a></td>
+                                                <td><a href="product_process.php?id=<?php echo $result[0]; ?>&val=del"><i class="fa-solid fa-trash fa-xl"></i></a></td>
                                             </tr>
                                         <?php
 
