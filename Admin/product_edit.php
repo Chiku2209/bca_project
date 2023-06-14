@@ -62,7 +62,7 @@ if (isset($_SESSION['email'])) {
                             <form action="product_process.php" method="post" enctype="multipart/form-data">
 
                                 <div class="card-body">
-
+                                    <input type="hidden" name="id" value="<?php echo $result[0]; ?>">
                                     <div class="form-group">
                                         <label>PRODUCT NAME</label>
                                         <input type="text" class="form-control" id="pro_name" placeholder="Enter Product Name" value="<?php echo $result[1]; ?>" name="pro_name">

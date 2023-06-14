@@ -53,12 +53,12 @@ if (isset($_SESSION['email'])) {
                             <div class="card-header">
                                 <h2 class="card-title"><big>Product Table</big></h2>
                                 <a href="product_add.php" class="float-right"><i class="fa-solid fa-square-plus fa-2xl" style="color: #ffffff;"></i></a>
-                                <a href="product_add_image.php" class="float-right mr-2"><i class="fa-sharp fa-solid fa-image fa-2xl"></i></a>
                             </div>
                         </div>
+                        <!-- Product Table -->
                         <div class="card">
                             <div class="card-header">
-                                <h3 class="card-title">DataTable with default features</h3>
+                                <h3 class="card-title">Poduct Table</h3>
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">
@@ -126,6 +126,74 @@ if (isset($_SESSION['email'])) {
                             </div>
                             <!-- /.card-body -->
                         </div>
+                        <!-- Image Table -->
+                        <br>
+                        <div class="card card-primary">
+                            <div class="card-header">
+                                <h2 class="card-title"><big>Product Image Table</big></h2>
+                                <a href="product_add_image.php" class="float-right"><i class="fa-solid fa-square-plus fa-2xl" style="color: #ffffff;"></i></a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">Product Image Table</h3>
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body">
+                                <?php
+                                include_once('include/config.php');
+                                $qry = "SELECT * from product_image order by id desc";
+                                $res = mysqli_query($conn, $qry);
+
+                                 
+                                ?>
+                                <table id="example2" class="table table-bordered table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Product Name</th>
+                                            <th>Image</th>
+                                            <th>Image Number</th>
+                                            <th>Edit</th>
+                                            <th>Delete</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php
+                                        $no = 1;
+                                        while ($result = mysqli_fetch_row($res)) {
+                                            $proqry = "SELECT * FROM products WHERE id='".$result[1]."'";
+                                            $prores = mysqli_query($conn,$proqry);
+                                            $arr = mysqli_fetch_row($prores);
+                                        ?>
+                                            <tr>
+                                                <td><?php echo $no;
+                                                    $no++; ?></td>
+                                                <td><?php echo $arr[1]; ?></td>
+                                                <td><a href="<?php echo '../images/product/' . $result[3]; ?>" target="_blank"><img src="<?php echo '../images/product/' . $result[3]; ?>" alt="Product Image" height="150px" width="150px"></a></td>
+                                                <td><?php echo $result[2]; ?></td>
+                                                <td><a href="product_edit.php?id=<?php echo $result[0]; ?>"><i class="fa-solid fa-file-pen fa-xl"></i></a></td>
+                                                <td><a href="product_process.php?id=<?php echo $result[0]; ?>&val=del"><i class="fa-solid fa-trash fa-xl"></i></a></td>
+                                            </tr>
+                                        <?php
+
+                                        }
+                                        ?>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Product Name</th>
+                                            <th>Image</th>
+                                            <th>Image Number</th>
+                                            <th>Edit</th>
+                                            <th>Delete</th>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
                     </div><!-- /.container-fluid -->
                 </section>
                 <!-- /.Main content -->
@@ -145,10 +213,18 @@ if (isset($_SESSION['email'])) {
                     "autoWidth": false,
                     "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
                 }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+
+                $("#example3").DataTable({
+                    "responsive": true,
+                    "lengthChange": false,
+                    "autoWidth": false,
+                    "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+                }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+
                 $('#example2').DataTable({
                     "paging": true,
                     "lengthChange": false,
-                    "searching": false,
+                    "searching": true,
                     "ordering": true,
                     "info": true,
                     "autoWidth": false,

@@ -1,6 +1,7 @@
 <?php
 session_start();
 if (isset($_SESSION['email'])) {
+    include('include/config.php');
 ?>
     <!DOCTYPE html>
     <html lang="en">
@@ -8,7 +9,7 @@ if (isset($_SESSION['email'])) {
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Nike SNKRS | Add Product</title>
+        <title>Nike SNKRS | Add Product Image</title>
 
         <!-- Styles -->
         <?php include('common/style.php'); ?>
@@ -33,7 +34,7 @@ if (isset($_SESSION['email'])) {
                     <div class="container-fluid">
                         <div class="row mb-2">
                             <div class="col-sm-6">
-                                <h1 class="m-0">Product Page</h1>
+                                <h1 class="m-0">Product Image Page</h1>
                             </div><!-- /.col -->
                             <div class="col-sm-6">
                                 <ol class="breadcrumb float-sm-right">
@@ -53,20 +54,36 @@ if (isset($_SESSION['email'])) {
                             <div class="card-header">
                                 <h2 class="card-title"><big>ADD Product Image</big></h2>
                             </div>
-                            <form action="product_process.php" method="post" enctype="multipart/form-data">
+                            <form action="product_image_process.php" method="post" enctype="multipart/form-data">
 
                                 <div class="card-body">
 
                                     <div class="form-group">
                                         <label>SELECT PRODUCT</label>
-                                        <input type="text" class="form-control" id="pro_name" placeholder="Enter Product Name" name="pro_name">
+                                        <select class="form-control select2" name="product_id" style="width: 100%;">
+                                            <option selected disabled>Select Product</option>
+                                            <?php
+                                            $qry = "SELECT * FROM products";
+                                            $res = mysqli_query($conn, $qry);
+                                            while ($result = mysqli_fetch_row($res)) {
+                                            ?>
+                                                <option value="<?php echo $result[0]; ?>"><?php echo $result[1]; ?></option>
+                                            <?php
+                                            }
+                                            ?>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>ENTER NUMBER OF IMAGE</label>
+                                        <input type="number" min="1" max="9" class="form-control" id="num" placeholder="Enter Product Image Number" name="num">
                                     </div>
 
                                     <div class="form-group">
                                         <label for="exampleInputFile">PRODUCT IMAGE</label>
                                         <div class="input-group">
                                             <div class="custom-file">
-                                                <input type="file" class="custom-file-input" id="exampleInputFile" multiple>
+                                                <input type="file" name="image" class="custom-file-input" id="image" multiple>
                                                 <label class="custom-file-label" for="exampleInputFile">Choose file</label>
                                             </div>
                                             <div class="input-group-append">
@@ -78,7 +95,7 @@ if (isset($_SESSION['email'])) {
                                 </div>
 
                                 <div class="card-footer">
-                                    <button type="submit" class="btn btn-primary" name="submit" role="button">ADD Product</button>
+                                    <button type="submit" class="btn btn-primary" name="submit" value="add" role="button">ADD Product</button>
                                 </div>
                             </form>
                         </div>
