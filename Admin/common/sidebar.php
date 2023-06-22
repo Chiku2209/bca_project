@@ -30,11 +30,18 @@
                         </p>
                     </a>
                 </li>
+                <?php 
+                    include('include/config.php');
+                    $Nam = "SELECT * FROM products";
+                    $NAm = mysqli_query($conn,$Nam);
+                    $NAM = mysqli_num_rows($NAm);
+                ?>
                 <li class="nav-item menu-open">
                     <a href="product.php" class="nav-link">
                         &nbsp;&nbsp;<i class="fa-solid fa-p"></i>&nbsp;&nbsp;&nbsp;&nbsp;
                         <p>
                             Product
+                            <span class="badge badge-info right"><?php echo $NAM; ?></span>
                         </p>
                     </a>
                 </li>

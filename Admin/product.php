@@ -145,7 +145,7 @@ if (isset($_SESSION['email'])) {
                                 $qry = "SELECT * from product_image order by id desc";
                                 $res = mysqli_query($conn, $qry);
 
-                                 
+
                                 ?>
                                 <table id="example2" class="table table-bordered table-striped">
                                     <thead>
@@ -162,8 +162,8 @@ if (isset($_SESSION['email'])) {
                                         <?php
                                         $no = 1;
                                         while ($result = mysqli_fetch_row($res)) {
-                                            $proqry = "SELECT * FROM products WHERE id='".$result[1]."'";
-                                            $prores = mysqli_query($conn,$proqry);
+                                            $proqry = "SELECT * FROM products WHERE id='" . $result[1] . "'";
+                                            $prores = mysqli_query($conn, $proqry);
                                             $arr = mysqli_fetch_row($prores);
                                         ?>
                                             <tr>
@@ -172,8 +172,8 @@ if (isset($_SESSION['email'])) {
                                                 <td><?php echo $arr[1]; ?></td>
                                                 <td><a href="<?php echo '../images/product/' . $result[3]; ?>" target="_blank"><img src="<?php echo '../images/product/' . $result[3]; ?>" alt="Product Image" height="150px" width="150px"></a></td>
                                                 <td><?php echo $result[2]; ?></td>
-                                                <td><a href="product_edit.php?id=<?php echo $result[0]; ?>"><i class="fa-solid fa-file-pen fa-xl"></i></a></td>
-                                                <td><a href="product_process.php?id=<?php echo $result[0]; ?>&val=del"><i class="fa-solid fa-trash fa-xl"></i></a></td>
+                                                <td><a href="product_edit_image.php?id=<?php echo $result[0]; ?>"><i class="fa-solid fa-file-pen fa-xl"></i></a></td>
+                                                <td><a href="product_image_process.php?id=<?php echo $result[0]; ?>&val=del"><i class="fa-solid fa-trash fa-xl"></i></a></td>
                                             </tr>
                                         <?php
 
