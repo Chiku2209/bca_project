@@ -30,15 +30,15 @@
                         </p>
                     </a>
                 </li>
-                <?php 
-                    include('include/config.php');
-                    $Nam = "SELECT * FROM products";
-                    $NAm = mysqli_query($conn,$Nam);
-                    $NAM = mysqli_num_rows($NAm);
+                <?php
+                include('include/config.php');
+                $Nam = "SELECT * FROM products";
+                $NAm = mysqli_query($conn, $Nam);
+                $NAM = mysqli_num_rows($NAm);
                 ?>
                 <li class="nav-item menu-open">
                     <a href="product.php" class="nav-link">
-                        &nbsp;&nbsp;<i class="fa-solid fa-p"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <i class="nav-icon fa-solid fa-p"></i>
                         <p>
                             Product
                             <span class="badge badge-info right"><?php echo $NAM; ?></span>
@@ -51,6 +51,14 @@
                         <p>
                             Calendar
                             <span class="badge badge-info right">2</span>
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="user.php" class="nav-link">
+                        <i class="nav-icon fa-solid fa-users"></i>&nbsp;
+                        <p>
+                            Members
                         </p>
                     </a>
                 </li>

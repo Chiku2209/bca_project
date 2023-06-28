@@ -1,3 +1,7 @@
+<?php
+session_start();
+if (isset($_SESSION['email'])) {
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -57,3 +61,8 @@
 </body>
 
 </html>
+<?php
+} else {
+    header('location:index.php');
+}
+?>
