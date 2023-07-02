@@ -15,7 +15,7 @@ if (isset($_SESSION['email'])) {
         <?php include('common/style.php'); ?>
     </head>
 
-    <body class="hold-transition sidebar-mini layout-fixed">
+    <body class="hold-transition sidebar-mini layout-fixed" id="grad">
         <div class="wrapper">
 
             <!-- Preloader -->

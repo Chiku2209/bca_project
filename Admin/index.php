@@ -21,25 +21,33 @@ if (!isset($_SESSION['email'])) {
         <!-- Theme style -->
         <link rel="stylesheet" href="dist/css/adminlte.min.css">
         <link rel="stylesheet" href="dist/css/custom.css">
+        <style>
+            a:hover{
+                color: black;
+            }
+            a:link{
+                color: black;
+            }
+        </style>
     </head>
 
-    <body class="hold-transition login-page">
+    <body class="hold-transition login-page" id="grad">
         <div class="login-box">
             <!-- /.login-logo -->
-            <div class="card card-outline card-primary">
+            <div class="card card-outline" id="grad1">
                 <div class="card-header text-center">
-                    <img src="dist/img/favicon.png" alt="" class="h-25 w-25">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <a href="index2.html" class="h1"><b>Nike Store</b></a>
+                    <img src="dist/img/adminpanel/nikesymbol.png" alt="" class="h-25 w-25">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="" class="h1" style="color: rgb(239, 117, 93);"><b>Nike Store</b></a>
                 </div>
                 <div class="card-body">
-                    <p class="login-box-msg">Sign in for DASHBOARD</p>
+                    <p class="login-box-msg clr">Sign in for DASHBOARD</p>
 
                     <form action="login_check.php" method="post">
                         <div class="input-group mb-3">
                             <input type="email" class="form-control" placeholder="Email" name="email">
                             <div class="input-group-append">
                                 <div class="input-group-text">
-                                    <span class="fas fa-envelope"></span>
+                                    <span class="fas fa-envelope"> Email</span>
                                 </div>
                             </div>
                         </div>
@@ -47,20 +55,21 @@ if (!isset($_SESSION['email'])) {
                             <input type="password" class="form-control" placeholder="Password" name="password">
                             <div class="input-group-append">
                                 <div class="input-group-text">
-                                    <span class="fas fa-lock"></span>
+                                    <span class="fas fa-lock"> Password</span>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-12">
-                                <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+                                <button type="submit" class="btn btn-block" style="background-color: rgb(51, 7, 59); color:white;">Sign In</button>
                             </div>
                             <!-- /.col -->
                         </div>
                     </form>
+                    <!-- <br>
                     <p class="mb-1">
                         <a href="forgot-password.html">I forgot my password</a>
-                    </p>
+                    </p> -->
                 </div>
                 <!-- /.card-body -->
             </div>

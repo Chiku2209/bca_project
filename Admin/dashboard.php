@@ -16,7 +16,7 @@ if (isset($_SESSION['email'])) {
     </head>
 
     <body class="hold-transition sidebar-mini layout-fixed">
-        <div class="wrapper">
+        <div class="wrapper bg-naman1">
 
             <!-- Preloader -->
             <!-- <?php include('common/preloader.php'); ?> -->
@@ -29,7 +29,7 @@ if (isset($_SESSION['email'])) {
             <?php include('common/sidebar.php'); ?>
 
             <!-- Content Wrapper. Contains page content -->
-            <div class="content-wrapper">
+            <div class="content-wrapper bg-naman2">
                 <div class="content-header">
                     <div class="container-fluid">
                         <div class="row mb-2">

@@ -52,6 +52,6 @@ if (isset($_POST['submit']) && $_POST['submit'] == "add") {
     header('location:product.php');
 }
 else{
-    echo "HELLO";
+    echo "Error....";
 }
 ?>
