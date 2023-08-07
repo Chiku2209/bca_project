@@ -3,6 +3,20 @@
     /* 25.7 */
 }
 
+#bgimg{
+    background-image: url("../img/bgimg/admin12.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#bgimg1{
+    background-image: url("../img/bgimg/admin12.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
 #grad1 {
     background-image: linear-gradient(209.3deg, hsla(290, 79%, 13%, 1) 50.2%, #ef755d 51.5%);
     /* 205.7 */
@@ -10,6 +24,10 @@
 
 .clr{
     color: white;
+}
+
+.clr-red{
+    background-color: #CE041C;
 }
 .clr-black{
     color: black;
@@ -19,4 +37,8 @@
 }
 .bg1{
     background-image: #33073b !important;
+}
+
+.clsright{
+    float: inline-start;
 }

@@ -1,4 +1,4 @@
-<aside class="main-sidebar elevation-4 bg-naman3" id="">
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="https://www.nike.com/in/launch?s=in-stock" class="brand-link">
         <img src="dist/img/adminpanel/adminsidebarlogo.jpeg" alt="Nike LOGO" class="brand-image elevation-3" style="opacity: .8">

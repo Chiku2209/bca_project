@@ -22,25 +22,26 @@ if (!isset($_SESSION['email'])) {
         <link rel="stylesheet" href="dist/css/adminlte.min.css">
         <link rel="stylesheet" href="dist/css/custom.css">
         <style>
-            a:hover{
+            a:hover {
                 color: black;
             }
-            a:link{
+
+            a:link {
                 color: black;
             }
         </style>
     </head>
 
-    <body class="hold-transition login-page" id="grad">
-        <div class="login-box">
+    <body class="hold-transition login-page" id="bgimg1">
+        <div class="" style="float: left; margin-right: 900px; margin-top: 180px; border: none;">
             <!-- /.login-logo -->
-            <div class="card card-outline" id="grad1">
-                <div class="card-header text-center">
-                    <img src="dist/img/adminpanel/nikesymbol.png" alt="" class="h-25 w-25">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <a href="" class="h1" style="color: rgb(239, 117, 93);"><b>Nike Store</b></a>
+            <div class="card clr-red" id="">
+                <div class="text-center">
+                    <!-- <img src="dist/img/login2.png" alt="" class="h-25 w-25">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+                    <br><a href="" class="h1 clr"><b>Admin Login</b></a>
                 </div>
                 <div class="card-body">
-                    <p class="login-box-msg clr">Sign in for DASHBOARD</p>
+                    <p class="login-box-msg clr"></p>
 
                     <form action="login_check.php" method="post">
                         <div class="input-group mb-3">
@@ -61,15 +62,15 @@ if (!isset($_SESSION['email'])) {
                         </div>
                         <div class="row">
                             <div class="col-12">
-                                <button type="submit" class="btn btn-block" style="background-color: rgb(51, 7, 59); color:white;">Sign In</button>
+                                <button type="submit" class="btn btn-block" style="background-color: rgb(0, 0, 0); color:white;">Login</button>
                             </div>
                             <!-- /.col -->
                         </div>
                     </form>
                     <!-- <br>
-                    <p class="mb-1">
-                        <a href="forgot-password.html">I forgot my password</a>
-                    </p> -->
+                            <p class="mb-1">
+                                <a href="forgot-password.html">I forgot my password</a>
+                            </p> -->
                 </div>
                 <!-- /.card-body -->
             </div>
