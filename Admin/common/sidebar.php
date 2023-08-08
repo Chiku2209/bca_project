@@ -13,7 +13,7 @@
                 <img src="dist/img/user2-160x160.jpg" class="elevation-2" alt="User Image">
             </div>
             <div class="info">
-                <a href="#" class="d-block">&nbsp;<?php echo $_SESSION['name']; ?></a>
+                <a href="profile.php" class="d-block">&nbsp;<?php echo $_SESSION['name']; ?></a>
             </div>
         </div>
 
