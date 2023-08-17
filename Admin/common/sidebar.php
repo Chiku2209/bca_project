@@ -36,7 +36,7 @@
                 $NAm = mysqli_query($conn, $Nam);
                 $NAM = mysqli_num_rows($NAm);
                 ?>
-                <li class="nav-item menu-open">
+                <li class="nav-item">
                     <a href="product.php" class="nav-link">
                         <i class="nav-icon fa-solid fa-p"></i>
                         <p>
@@ -45,12 +45,18 @@
                         </p>
                     </a>
                 </li>
+                <?php
+                include_once('include/config.php');
+                $slider = "SELECT * FROM slider";
+                $sli = mysqli_query($conn, $slider);
+                $res = mysqli_num_rows($sli);
+                ?>
                 <li class="nav-item">
-                    <a href="pages/calendar.html" class="nav-link">
+                    <a href="slider.php" class="nav-link">
                         <i class="nav-icon far fa-calendar-alt"></i>
                         <p>
-                            Calendar
-                            <span class="badge badge-info right">2</span>
+                            Slider
+                            <span class="badge badge-info right"><?php echo $res ?></span>
                         </p>
                     </a>
                 </li>

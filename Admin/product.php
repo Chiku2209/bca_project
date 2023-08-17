@@ -75,7 +75,7 @@ if (isset($_SESSION['email'])) {
                                             <th>Price</th>
                                             <th>Color</th>
                                             <th>Description 1</th>
-                                            <th>Description 2</th>
+                                            <th>Latest</th>
                                             <th>SKU</th>
                                             <th>Country</th>
                                             <th>Heritage</th>
@@ -114,7 +114,7 @@ if (isset($_SESSION['email'])) {
                                             <th>Price</th>
                                             <th>Color</th>
                                             <th>Description 1</th>
-                                            <th>Description 2</th>
+                                            <th>Latest</th>
                                             <th>SKU</th>
                                             <th>Country</th>
                                             <th>Heritage</th>

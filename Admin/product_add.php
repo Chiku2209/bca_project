@@ -78,8 +78,8 @@ if (isset($_SESSION['email'])) {
                                     </div>
 
                                     <div class="form-group">
-                                        <label>DESCRIPTION 2</label>
-                                        <textarea name="description2" class="form-control" id="description2" cols="100" rows="2" placeholder="Enter Description 2"></textarea>
+                                        <label>LATEST</label>
+                                        <textarea name="description2" class="form-control" id="description2" cols="100" rows="2" placeholder="Yes/No"></textarea>
                                     </div>
 
                                     <div class="form-group">
