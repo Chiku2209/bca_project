@@ -5,7 +5,7 @@
     <!-- Mobile Specific Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Favicon-->
-    <link rel="shortcut icon" href="img/fav.png">
+    <link rel="shortcut icon" href="img/lg.png">
     <!-- Author Meta -->
     <meta name="author" content="CodePixar">
     <!-- Meta Description -->
@@ -15,7 +15,7 @@
     <!-- meta character set -->
     <meta charset="UTF-8">
     <!-- Site Title -->
-    <title>Karma Shop</title>
+    <title>Nike | SNKRS</title>
     <!-- 
         CSS 
             ============================================= -->
@@ -186,62 +186,34 @@
     <!-- End category Area -->
 
     <!-- start product Area -->
-    <section class="">
-        <!-- single product slide -->
-        <?php
-        include_once('Admin/include/config.php');
-
-        $qry1 = "SELECT * FROM products";
-        $res1 = mysqli_query($conn, $qry1);
-        ?>
-        <div class="">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-6 text-center">
-                        <div class="section-title">
-                            <h1>Just Arrived...!</h1>
-                            <p></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <?php
-                    while ($row1 = mysqli_fetch_row($res1)) {
-                    ?>
-                        <!-- single product -->
-                        <div class="col-lg-3 col-md-6">
-                            <div class="single-product">
-                                <?php
-                                    $qry2 = "SELECT * FROM product_image WHERE product_id = '".$row1[0]."' && num = 1";
-                                    $res2 = mysqli_query($conn, $qry2);
-                                    $row2 = mysqli_fetch_row($res2)
-                                ?>
-                                <img class="img-fluid" src="<?php echo 'images/product/' . $row2[3]; ?>" alt="">
-                                <div class="product-details">
-                                    <h6><?php echo $row1[1] ?></h6>
-                                    <div class="price">
-                                        <h6><?php echo $row1[2] ?></h6>
-                                    </div>
-                                    <div class="prd-bottom">
-
-                                        <a href="" class="social-info">
-                                            <span class="ti-bag"></span>
-                                            <p class="hover-text">add to bag</p>
-                                        </a>
-                                        <a href="" class="social-info">
-                                            <span class="lnr lnr-heart"></span>
-                                            <p class="hover-text">Wishlist</p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    <?php
-
-                    }
-                    ?>
+    <br>
+    <section class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 text-center">
+                <div class="section-title">
+                    <h1>Just Arrived...!</h1>
+                    <p></p>
                 </div>
             </div>
+        </div>
+        <div class="owl-carousel1">
+            <?php
+            include_once('Admin/include/config.php');
+            $qry1 = "SELECT * FROM products";
+            $res1 = mysqli_query($conn, $qry1);
+            while ($row1 = mysqli_fetch_row($res1)) {
+                $qry2 = "SELECT * FROM product_image WHERE product_id = '" . $row1[0] . "' && num = 1";
+                $res2 = mysqli_query($conn, $qry2);
+                $row2 = mysqli_fetch_row($res2)
+            ?>
+                <div class="col-lg-12 col-md-6">
+                    <div class="">
+                        <a href="singleproduct.php?id=<?php echo $row1[0]; ?>"><img class="" src="<?php echo 'images/product/' . $row2[3]; ?>" alt="Product IMAGE...!" height="300px" width="300px"></a>
+                    </div>
+                </div>
+            <?php
+            }
+            ?>
         </div>
     </section>
     <!-- Start exclusive deal Area -->
@@ -314,6 +286,28 @@
     <?php
     include('common/script.php');
     ?>
+    <script>
+        var owl = $('.owl-carousel1');
+        owl.owlCarousel({
+            loop: false,
+            nav: false,
+            margin: 0,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                960: {
+                    items: 3
+                },
+                1200: {
+                    items: 4
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>
