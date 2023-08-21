@@ -1,4 +1,5 @@
 <?php
+session_start();
 include_once('Admin/include/config.php');
 $id = $_REQUEST['id'];
 
@@ -22,7 +23,9 @@ $row2 = mysqli_fetch_all($res2);
 	<!-- Mobile Specific Meta -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<!-- Favicon-->
-	<link rel="shortcut icon" href="img/lg.png">
+	<?php
+        include('common/favicon.php');
+    ?>
 	<!-- Author Meta -->
 	<meta name="author" content="CodePixar">
 	<!-- Meta Description -->
