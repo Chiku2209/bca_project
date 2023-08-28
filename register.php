@@ -63,19 +63,16 @@
                         <h3>Sign Up</h3>
                         <form class="row login_form" action="register_process.php" method="post" id="contactForm" novalidate="novalidate">
                             <div class="col-md-12 form-group">
-                                <input type="text" class="form-control" id="name" name="name" placeholder="Enter Your Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Name'">
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Enter Your Name">
                             </div>
                             <div class="col-md-12 form-group">
-                                <input type="text" class="form-control" id="username" name="username" placeholder="Enter Your Username" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Username'">
+                                <input type="text" class="form-control" id="username" name="username" placeholder="Enter Your Username">
                             </div>
                             <div class="col-md-12 form-group">
-                                <input type="email" class="form-control" id="email" name="email" placeholder="Enter Your Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email'">
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Enter Your Email">
                             </div>
                             <div class="col-md-12 form-group">
-                                <input type="number" class="form-control" id="contact" name="contact" placeholder="Enter Your Contact No" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Contact No'">
-                            </div>
-                            <div class="col-md-12 form-group">
-                                <input type="password" class="form-control" id="password" name="password" placeholder="Enter Your Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'">
+                                <input type="password" class="form-control" id="password" name="password" placeholder="Enter Your Password">
                             </div>
                             <div class="col-md-12 form-group">
                                 <button type="submit" value="submit" class="primary-btn">Create Account</button>

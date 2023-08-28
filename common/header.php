@@ -14,12 +14,16 @@
                     <ul class="nav navbar-nav menu_nav ml-auto">
                         <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="products.php">Products</a></li>
-                        <li class="nav-item"><a class="nav-link" href="aboutus.php">About Us</a></li>
                         <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
                         <?php
-                            if(isset($_SESSION['name']))
+                            if(isset($_SESSION['uname']))
                             {
-                                ?> <li class="nav-item"><a class="nav-link" href="profile.php"><?php echo $_SESSION['name'] ?></a></li>
+                                include_once('Admin/include/config.php');
+                                $qry = "SELECT * FROM members WHERE username='".$_SESSION['uname']."'";
+                                $res = mysqli_query($conn, $qry);
+                                $row1 = mysqli_fetch_row($res);
+
+                                ?> <li class="nav-item"><a class="nav-link" href="profile.php?id=<?php echo $row1[0]; ?>"><?php echo $_SESSION['uname'] ?></a></li>
                                    <li class="nav-item"><a class="nav-link" href="logout.php">Logout</a></li> <?php
                             }
                             else{

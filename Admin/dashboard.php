@@ -47,6 +47,20 @@ if (isset($_SESSION['email'])) {
                 <!-- /.content-header -->
 
                 <!-- Main content -->
+                <?php
+                    include_once('include/config.php');
+                    $qry1 = "SELECT * FROM members";
+                    $res1 = mysqli_query($conn, $qry1);
+                    $members = mysqli_num_rows($res1);
+
+                    $qry2 = "SELECT * FROM products";
+                    $res2 = mysqli_query($conn, $qry2);
+                    $products = mysqli_num_rows($res2);
+
+                    $qry3 = "SELECT * FROM slider";
+                    $res3 = mysqli_query($conn, $qry3);
+                    $slider = mysqli_num_rows($res3);
+                ?>
                 <section class="content">
                     <div class="container-fluid">
                         <!-- Small boxes (Stat box) -->
@@ -55,9 +69,9 @@ if (isset($_SESSION['email'])) {
                                 <!-- small box -->
                                 <div class="small-box bg-info">
                                     <div class="inner">
-                                        <h3>150</h3>
+                                        <h3><?php echo $members; ?></h3>
 
-                                        <p>New Orders</p>
+                                        <p>Registered Members</p>
                                     </div>
                                     <div class="icon">
                                         <i class="ion ion-bag"></i>
