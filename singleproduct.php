@@ -24,8 +24,8 @@ $row2 = mysqli_fetch_all($res2);
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<!-- Favicon-->
 	<?php
-        include('common/favicon.php');
-    ?>
+	include('common/favicon.php');
+	?>
 	<!-- Author Meta -->
 	<meta name="author" content="CodePixar">
 	<!-- Meta Description -->
@@ -103,8 +103,8 @@ $row2 = mysqli_fetch_all($res2);
 						</ul>
 						<p><?php echo $row[4]; ?></p>
 						<div class="card_area d-flex align-items-center">
-							<a class="primary-btn" href="#">Add to Cart</a>
-							<a class="icon_btn" href="#"><i class="lnr lnr lnr-heart"></i></a>
+							<a class="primary-btn" href="cart_process.php?pro_id=<?php echo $row[0]; ?>">Add to Cart</a>
+							<!-- <a class="icon_btn" href="#"><i class="lnr lnr lnr-heart"></i></a> -->
 						</div>
 					</div>
 				</div>
@@ -118,14 +118,14 @@ $row2 = mysqli_fetch_all($res2);
 		<div class="container">
 			<ul class="nav nav-tabs" id="myTab" role="tablist">
 				<li class="nav-item">
-					<a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Description</a>
+					<a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="false">Description</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Specification</a>
+					<a class="nav-link active" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="true">Specification</a>
 				</li>
 			</ul>
 			<div class="tab-content" id="myTabContent">
-				<div class="tab-pane fade active show" id="home" role="tabpanel" aria-labelledby="home-tab">
+				<div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab">
 					<p><?php echo $row[4]; ?></p>
 					<br>
 					<p><?php echo $row[8]; ?></p>
@@ -137,7 +137,7 @@ $row2 = mysqli_fetch_all($res2);
 						shoes appeared, becoming the perfect choice to walk silently. That's exactly how the term sneaker
 						originated.</p>
 				</div>
-				<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+				<div class="tab-pane fade active show" id="profile" role="tabpanel" aria-labelledby="profile-tab">
 					<div class="table-responsive">
 						<table class="table">
 							<tbody>

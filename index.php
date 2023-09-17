@@ -131,58 +131,29 @@ session_start();
                     <div class="row">
                         <div class="col-lg-8 col-md-8">
                             <div class="single-deal">
-                                <div class="overlay"></div>
                                 <img class="img-fluid w-100" src="img/category/c1.jpg" alt="">
-                                <a href="sport.php" class="img-pop-up" target="_blank">
-                                    <div class="deal-details">
-                                        <h6 class="deal-title">Sneaker for Sports</h6>
-                                    </div>
-                                </a>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4">
                             <div class="single-deal">
-                                <div class="overlay"></div>
-                                <img class="img-fluid w-100" src="img/category/c2.jpg" alt="">
-                                <a href="img/category/c2.jpg" class="img-pop-up" target="_blank">
-                                    <div class="deal-details">
-                                        <h6 class="deal-title">Sneaker for Sports</h6>
-                                    </div>
-                                </a>
+                                <img class="img-fluid w-100" src="img/category/c2.jpg" alt="">             
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4">
                             <div class="single-deal">
-                                <div class="overlay"></div>
                                 <img class="img-fluid w-100" src="img/category/c3.jpg" alt="">
-                                <a href="img/category/c3.jpg" class="img-pop-up" target="_blank">
-                                    <div class="deal-details">
-                                        <h6 class="deal-title">Product for Couple</h6>
-                                    </div>
-                                </a>
                             </div>
                         </div>
                         <div class="col-lg-8 col-md-8">
                             <div class="single-deal">
-                                <div class="overlay"></div>
                                 <img class="img-fluid w-100" src="img/category/c4.jpg" alt="">
-                                <a href="img/category/c4.jpg" class="img-pop-up" target="_blank">
-                                    <div class="deal-details">
-                                        <h6 class="deal-title">Sneaker for Sports</h6>
-                                    </div>
-                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="single-deal">
-                        <div class="overlay"></div>
                         <img class="img-fluid w-100" src="img/category/c5.jpg" alt="">
-                        <a href="img/category/c5.jpg" class="img-pop-up" target="_blank">
-                            <div class="deal-details">
-                                <h6 class="deal-title">Sneaker for Sports</h6>
-                            </div>
                         </a>
                     </div>
                 </div>
@@ -193,7 +164,7 @@ session_start();
 
     <!-- start product Area -->
     <br>
-    <section class="container">
+    <section class="container section_gap">
         <div class="row justify-content-center">
             <div class="col-lg-6 text-center">
                 <div class="section-title">
@@ -205,7 +176,7 @@ session_start();
         <div class="owl-carousel1">
             <?php
             include_once('Admin/include/config.php');
-            $qry1 = "SELECT * FROM products";
+            $qry1 = "SELECT * FROM products WHERE description2='YES'";
             $res1 = mysqli_query($conn, $qry1);
             while ($row1 = mysqli_fetch_row($res1)) {
                 $qry2 = "SELECT * FROM product_image WHERE product_id = '" . $row1[0] . "' && num = 1";
@@ -253,7 +224,7 @@ session_start();
                             </div>
                         </div>
                     </div>
-                    <a href="" class="primary-btn">Shop Now</a>
+                    <!-- <a href="" class="primary-btn">Shop Now</a> -->
                 </div>
             </div>
         </div>

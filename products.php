@@ -67,14 +67,9 @@ session_start();
                     $res2 = mysqli_query($conn, $qry2);
                     $row2 = mysqli_fetch_row($res2)
                 ?>
-                    <!-- single features -->
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-features">
-                            <div class="">
-                                <a href="singleproduct.php?id=<?php echo $row1[0]; ?>"><img class="" src="<?php echo 'images/product/' . $row2[3]; ?>" alt="Product IMAGE...!" height="300px" width="300px"></a>
-                            </div>
-                            <br>
-                        </div>
+                    <div class="col-md-3 p-3">
+                        <a href="singleproduct.php?id=<?php echo $row1[0]; ?>"><img class="" src="<?php echo 'images/product/' . $row2[3]; ?>" alt="Product IMAGE...!" height="250px" width="250px">
+                        </a>
                     </div>
                 <?php
                 }

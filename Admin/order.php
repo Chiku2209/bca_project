@@ -61,29 +61,38 @@ if (isset($_SESSION['email'])) {
                             <div class="card-body">
                                 <?php
                                 include_once('include/config.php');
-                                $qry = "SELECT * from members order by id desc";
+                                $qry = "SELECT * from orders";
                                 $res = mysqli_query($conn, $qry);
+
+
                                 ?>
                                 <table id="example1" class="table table-bordered table-striped">
                                     <thead>
                                         <tr>
                                             <th>ID</th>
-                                            <th>Name</th>
-                                            <th>Email</th>
-                                            <th>Username</th>
+                                            <th>User</th>
+                                            <th>Product</th>
+                                            <th>Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <?php
                                         $no = 1;
                                         while ($result = mysqli_fetch_row($res)) {
+                                            $qry1 = "SELECT * FROM members WHERE id='" . $result[1] . "'";
+                                            $res1 = mysqli_query($conn, $qry1);
+                                            $result1 = mysqli_fetch_assoc($res1);
+
+                                            $qry2 = "SELECT * FROM products WHERE id='" . $result[2] . "'";
+                                            $res2 = mysqli_query($conn, $qry2);
+                                            $result2 = mysqli_fetch_assoc($res2);
                                         ?>
                                             <tr>
                                                 <td><?php echo $no;
                                                     $no++; ?></td>
-                                                <td><?php echo $result[1]; ?></td>
-                                                <td><?php echo $result[2]; ?></td>
-                                                <td><?php echo $result[4]; ?></td>
+                                                <td><?php echo $result1['name']; ?></td>
+                                                <td><?php echo $result2['pro_name']; ?></td>
+                                                <td><?php echo $result[3]; ?></td>
                                             </tr>
                                         <?php
 
@@ -93,9 +102,9 @@ if (isset($_SESSION['email'])) {
                                     <tfoot>
                                         <tr>
                                             <th>ID</th>
-                                            <th>Name</th>
-                                            <th>Email</th>
-                                            <th>Username</th>
+                                            <th>User</th>
+                                            <th>Product</th>
+                                            <th>Status</th>
                                         </tr>
                                     </tfoot>
                                 </table>

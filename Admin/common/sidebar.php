@@ -60,6 +60,20 @@
                         </p>
                     </a>
                 </li>
+                <?php
+                $sliderr = "SELECT * FROM orders";
+                $slid = mysqli_query($conn, $sliderr);
+                $res3 = mysqli_num_rows($slid);
+                ?>
+                <li class="nav-item">
+                    <a href="order.php" class="nav-link">
+                        <i class="nav-icon far fa-calendar-alt"></i>
+                        <p>
+                            order
+                            <span class="badge badge-info right"><?php echo $res3 ?></span>
+                        </p>
+                    </a>
+                </li>
                 <li class="nav-item">
                     <a href="user.php" class="nav-link">
                         <i class="nav-icon fa-solid fa-users"></i>&nbsp;

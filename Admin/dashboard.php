@@ -60,12 +60,17 @@ if (isset($_SESSION['email'])) {
                     $qry3 = "SELECT * FROM slider";
                     $res3 = mysqli_query($conn, $qry3);
                     $slider = mysqli_num_rows($res3);
+
+                    $qry4 = "SELECT * FROM orders";
+                    $res4 = mysqli_query($conn, $qry4);
+                    $orders = mysqli_num_rows($res4);
+
                 ?>
                 <section class="content">
                     <div class="container-fluid">
                         <!-- Small boxes (Stat box) -->
                         <div class="row">
-                            <div class="col-lg-3 col-6">
+                            <div class="col-lg-4 col-6">
                                 <!-- small box -->
                                 <div class="small-box bg-info">
                                     <div class="inner">
@@ -80,13 +85,13 @@ if (isset($_SESSION['email'])) {
                                 </div>
                             </div>
                             <!-- ./col -->
-                            <div class="col-lg-3 col-6">
+                            <div class="col-lg-4 col-6">
                                 <!-- small box -->
                                 <div class="small-box bg-success">
                                     <div class="inner">
-                                        <h3>53<sup style="font-size: 20px">%</sup></h3>
+                                        <h3><?php echo $orders; ?></h3>
 
-                                        <p>Bounce Rate</p>
+                                        <p>All Orders</p>
                                     </div>
                                     <div class="icon">
                                         <i class="ion ion-stats-bars"></i>
@@ -95,13 +100,13 @@ if (isset($_SESSION['email'])) {
                                 </div>
                             </div>
                             <!-- ./col -->
-                            <div class="col-lg-3 col-6">
+                            <div class="col-lg-4 col-6">
                                 <!-- small box -->
                                 <div class="small-box bg-warning">
                                     <div class="inner">
-                                        <h3>44</h3>
+                                        <h3><?php echo $products; ?></h3>
 
-                                        <p>User Registrations</p>
+                                        <p>Added Products</p>
                                     </div>
                                     <div class="icon">
                                         <i class="ion ion-person-add"></i>
@@ -110,21 +115,7 @@ if (isset($_SESSION['email'])) {
                                 </div>
                             </div>
                             <!-- ./col -->
-                            <div class="col-lg-3 col-6">
-                                <!-- small box -->
-                                <div class="small-box bg-danger">
-                                    <div class="inner">
-                                        <h3>65</h3>
-
-                                        <p>Unique Visitors</p>
-                                    </div>
-                                    <div class="icon">
-                                        <i class="ion ion-pie-graph"></i>
-                                    </div>
-                                    <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-                                </div>
-                            </div>
-                            <!-- ./col -->
+                            
                         </div>
                     </div>
                     <!-- /.container-fluid -->

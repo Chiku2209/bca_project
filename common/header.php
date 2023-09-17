@@ -23,8 +23,11 @@
                                 $res = mysqli_query($conn, $qry);
                                 $row1 = mysqli_fetch_row($res);
 
+                                $_SESSION['userid'] = $row1[0];
+
                                 ?> <li class="nav-item"><a class="nav-link" href="profile.php?id=<?php echo $row1[0]; ?>"><?php echo $_SESSION['uname'] ?></a></li>
-                                   <li class="nav-item"><a class="nav-link" href="logout.php">Logout</a></li> <?php
+                                   <li class="nav-item"><a class="nav-link" href="logout.php">Logout</a></li>
+                                   <i class="fa-duotone fa-cart-shopping"></i> <?php
                             }
                             else{
                                ?> <li class="nav-item"><a class="nav-link" href="login.php">Login</a></li> <?php
