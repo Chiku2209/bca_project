@@ -9,7 +9,7 @@ if (isset($_SESSION['email'])) {
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Nike SNKRS | Add Product Image</title>
+        <title>Nike SNKRS | Add Slider</title>
 
         <!-- Styles -->
         <?php include('common/style.php'); ?>

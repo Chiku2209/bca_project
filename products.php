@@ -22,7 +22,7 @@ session_start();
     <!-- meta character set -->
     <meta charset="UTF-8">
     <!-- Site Title -->
-    <title>Nike | SNKRS</title>
+    <title>Nike | Products</title>
 
     <!-- CSS ============================================= -->
     <?php
@@ -39,14 +39,14 @@ session_start();
     <!-- End Header Area -->
 
     <!-- Start Banner Area -->
-    <section class="banner-area organic-breadcrumb">
+    <section class="" style="margin-top: 150px;">
         <div class="container">
             <div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
                 <div class="col-first">
-                    <h1>Products</h1>
+                    <h1 style="color:black;">Products</h1>
                     <nav class="d-flex align-items-center">
-                        <a href="index.php">Home<span class="lnr lnr-arrow-right"></span></a>
-                        <a href="#">Products</a>
+                        <a href="index.php" style="color:black;">Home<span class="lnr lnr-arrow-right"></span></a>
+                        <a href="#" style="color:black;">Products</a>
                     </nav>
                 </div>
             </div>

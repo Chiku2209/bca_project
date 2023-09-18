@@ -38,7 +38,7 @@
                 ?>
                 <li class="nav-item">
                     <a href="product.php" class="nav-link">
-                        <i class="nav-icon fa-solid fa-p"></i>
+                        <i class="nav-icon fa-solid fa-p fa-bounce"></i>
                         <p>
                             Product
                             <span class="badge badge-info right"><?php echo $NAM; ?></span>
@@ -53,7 +53,7 @@
                 ?>
                 <li class="nav-item">
                     <a href="slider.php" class="nav-link">
-                        <i class="nav-icon far fa-calendar-alt"></i>
+                        <i class="nav-icon fa-solid fa-sliders fa-bounce"></i>
                         <p>
                             Slider
                             <span class="badge badge-info right"><?php echo $res ?></span>
@@ -67,18 +67,24 @@
                 ?>
                 <li class="nav-item">
                     <a href="order.php" class="nav-link">
-                        <i class="nav-icon far fa-calendar-alt"></i>
+                        <i class="nav-icon fab fa-first-order fa-spin"></i>
                         <p>
                             order
                             <span class="badge badge-info right"><?php echo $res3 ?></span>
                         </p>
                     </a>
                 </li>
+                <?php
+                    $mem = "SELECT * FROM members";
+                    $mems = mysqli_query($conn, $mem);
+                    $res5 = mysqli_num_rows($mems);
+                ?>
                 <li class="nav-item">
                     <a href="user.php" class="nav-link">
-                        <i class="nav-icon fa-solid fa-users"></i>&nbsp;
+                        <i class="nav-icon fa-solid fa-person fa-bounce"></i>&nbsp;
                         <p>
                             Members
+                            <span class="badge badge-info right"><?php echo $res5 ?></span>
                         </p>
                     </a>
                 </li>

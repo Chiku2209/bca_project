@@ -21,7 +21,7 @@ if (isset($_POST['submit']) && $_POST['submit'] == "add") {
     if ($_FILES['image']['name'] == NULL) {
         $qry = "UPDATE slider set description = '" . $description ."' WHERE id='".$id."' ";
         $ress = mysqli_query($conn, $qry);
-        header('location:product.php');
+        header('location:slider.php');
     } elseif ($_FILES['image']['name']) {
         $pro = "SELECT * FROM slider WHERE id='".$id."'";
         $respro = mysqli_query($conn, $pro);

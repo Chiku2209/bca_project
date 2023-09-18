@@ -39,7 +39,7 @@ session_start();
     <!-- End Header Area -->
 
     <!-- start banner Area -->
-    <section class="banner-area">
+    <section class="">
         <div class="container">
             <div class="row fullscreen align-items-center justify-content-start">
                 <div class="col-lg-12">
@@ -136,7 +136,7 @@ session_start();
                         </div>
                         <div class="col-lg-4 col-md-4">
                             <div class="single-deal">
-                                <img class="img-fluid w-100" src="img/category/c2.jpg" alt="">             
+                                <img class="img-fluid w-100" src="img/category/c2.jpg" alt="">
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4">

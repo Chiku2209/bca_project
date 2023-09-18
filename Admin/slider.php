@@ -9,7 +9,7 @@ if (isset($_SESSION['email'])) {
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Nike SNKRS | Product</title>
+        <title>Nike SNKRS | Slider</title>
 
         <!-- Styles -->
         <?php include('common/style.php'); ?>
@@ -34,7 +34,7 @@ if (isset($_SESSION['email'])) {
                     <div class="container-fluid">
                         <div class="row mb-2">
                             <div class="col-sm-6">
-                                <h1 class="m-0">Product Page</h1>
+                                <h1 class="m-0">Slider Page</h1>
                             </div><!-- /.col -->
                             <div class="col-sm-6">
                                 <ol class="breadcrumb float-sm-right">

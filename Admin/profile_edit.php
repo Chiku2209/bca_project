@@ -8,7 +8,7 @@ if (isset($_SESSION['email'])) {
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Nike SNKRS | Profile</title>
+        <title>Nike SNKRS | Edit Profile</title>
 
         <!-- Styles -->
         <?php include('common/style.php'); ?>

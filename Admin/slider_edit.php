@@ -9,7 +9,7 @@ if (isset($_SESSION['email'])) {
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Nike SNKRS | Edit Product Image</title>
+        <title>Nike SNKRS | Edit Slider</title>
 
         <!-- Styles -->
         <?php include('common/style.php'); ?>
@@ -52,7 +52,7 @@ if (isset($_SESSION['email'])) {
                         <br>
                         <div class="card card-primary">
                             <div class="card-header">
-                                <h2 class="card-title"><big>Edit Product Image</big></h2>
+                                <h2 class="card-title"><big>Edit Slider</big></h2>
                             </div>
                             <?php
                             extract($_REQUEST);
@@ -78,7 +78,7 @@ if (isset($_SESSION['email'])) {
                                             </div>
                                         </div>
                                         <div>
-                                            <img class="image-disp" src="../images/slider/<?php echo $row[1]; ?>" alt="Slider Image" height="200px" width="200px">
+                                            <img class="image-disp" src="../images/slider/<?php echo $row[1]; ?>" alt="Slider Image" height="200px" width="350px">
                                         </div>
                                     </div>
 

@@ -79,9 +79,9 @@ if (isset($_SESSION['email'])) {
                                         <p>Registered Members</p>
                                     </div>
                                     <div class="icon">
-                                        <i class="ion ion-bag"></i>
+                                        <i class="fa-solid fa-person"></i>
                                     </div>
-                                    <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                                    <a href="user.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                                 </div>
                             </div>
                             <!-- ./col -->
@@ -94,9 +94,9 @@ if (isset($_SESSION['email'])) {
                                         <p>All Orders</p>
                                     </div>
                                     <div class="icon">
-                                        <i class="ion ion-stats-bars"></i>
+                                        <i class="fa-solid fa-shopping-cart"></i>
                                     </div>
-                                    <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                                    <a href="order.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                                 </div>
                             </div>
                             <!-- ./col -->
@@ -109,9 +109,9 @@ if (isset($_SESSION['email'])) {
                                         <p>Added Products</p>
                                     </div>
                                     <div class="icon">
-                                        <i class="ion ion-person-add"></i>
+                                        <i class="fa-solid fa-p"></i>
                                     </div>
-                                    <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                                    <a href="product.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                                 </div>
                             </div>
                             <!-- ./col -->

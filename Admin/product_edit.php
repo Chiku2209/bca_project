@@ -45,7 +45,7 @@ if (isset($_SESSION['email'])) {
                                 <ol class="breadcrumb float-sm-right">
                                     <li class="breadcrumb-item"><a href="dashboard.php">Dashboard</a></li>
                                     <li class="breadcrumb-item"><a href="product.php">Product</a></li>
-                                    <li class="breadcrumb-item active">Add Product</li>
+                                    <li class="breadcrumb-item active">Edit Product</li>
                                 </ol>
                             </div><!-- /.col -->
                         </div><!-- /.row -->
@@ -57,7 +57,7 @@ if (isset($_SESSION['email'])) {
                         <br>
                         <div class="card card-primary">
                             <div class="card-header">
-                                <h2 class="card-title"><big>ADD Product</big></h2>
+                                <h2 class="card-title"><big>Edit Product</big></h2>
                             </div>
                             <form action="product_process.php" method="post" enctype="multipart/form-data">
 

@@ -8,7 +8,7 @@ if (isset($_SESSION['email'])) {
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Nike SNKRS | Master</title>
+        <title>Nike SNKRS | User</title>
 
         <!-- Styles -->
         <?php include('common/style.php'); ?>
@@ -33,12 +33,12 @@ if (isset($_SESSION['email'])) {
                     <div class="container-fluid">
                         <div class="row mb-2">
                             <div class="col-sm-6">
-                                <h1 class="m-0">Members Page</h1>
+                                <h1 class="m-0">Users Page</h1>
                             </div><!-- /.col -->
                             <div class="col-sm-6">
                                 <ol class="breadcrumb float-sm-right">
-                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                    <li class="breadcrumb-item active">Members</li>
+                                    <li class="breadcrumb-item"><a href="dashboard.php">Home</a></li>
+                                    <li class="breadcrumb-item active">Users</li>
                                 </ol>
                             </div><!-- /.col -->
                         </div><!-- /.row -->
@@ -49,7 +49,7 @@ if (isset($_SESSION['email'])) {
                         <br>
                         <div class="card card-primary">
                             <div class="card-header">
-                                <h2 class="card-title"><big>Members's Table</big></h2>
+                                <h2 class="card-title"><big>Users's Table</big></h2>
                             </div>
                         </div>
                         <!-- Product Table -->
